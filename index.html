@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Game - měření reakčního času</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎯 Reaction Game</h1>
+    <p class="subtitle">Klikni na čtverec co nejrychleji!</p>
+
+    <div class="stats">
+        <div class="stat-box">
+            <span class="stat-label">Reakční čas:</span>
+            <span id="time" class="stat-value">0</span> ms
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Nejlepší skóre:</span>
+            <span id="bestScore" class="stat-value">-</span> ms
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Kolo:</span>
+            <span id="round" class="stat-value">0</span>/5
+        </div>
+    </div>
+
+    <div id="gameArea">
+        <div id="target"></div>
+    </div>
+
+    <div class="controls">
+        <button onclick="startGame()" class="btn-primary">▶ Start hry</button>
+        <button onclick="resetBestScore()" class="btn-secondary">🗑 Reset skóre</button>
+    </div>
+
+    <div class="info">
+        <p>⚡ Rychlost se hodnotí:</p>
+        <div class="legend">
+            <span class="legend-item"><span class="color-box green"></span> &lt; 300 ms = blesk</span>
+            <span class="legend-item"><span class="color-box orange"></span> 300-500 ms = průměr</span>
+            <span class="legend-item"><span class="color-box red"></span> &gt; 500 ms = pomalé</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
